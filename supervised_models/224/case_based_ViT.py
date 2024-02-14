@@ -187,8 +187,8 @@ for index, model_name in enumerate(models_n):
     ten_slice_prob = np.asarray(ten_slice_prob).reshape(len(ten_slice_prob), )
 
     true_labels = np.asarray(true_labels).reshape(len(true_labels), )
-    predictions = np.where(probabilities < 0.62, 0, 1).reshape(len(probabilities), )
-    ten_slice_prediction = np.where(ten_slice_prob < 0.62, 0, 1).reshape(len(ten_slice_prob), )
+    predictions = np.where(probabilities < 0.5, 0, 1).reshape(len(probabilities), )
+    ten_slice_prediction = np.where(ten_slice_prob < 0.5, 0, 1).reshape(len(ten_slice_prob), )
 
 
     results = pd.DataFrame({"Filename": uniqe_filename,
@@ -259,7 +259,7 @@ for index, model_name in enumerate(models_n):
         true_labels.append(np.mean(y_true))
     probabilities = np.asarray(probabilities).reshape(len(probabilities), )
     true_labels = np.asarray(true_labels).reshape(len(true_labels), )
-    predictions = np.where(probabilities < 0.62, 0, 1).reshape(len(probabilities), )
+    predictions = np.where(probabilities < 0.5, 0, 1).reshape(len(probabilities), )
 
     acc = accuracy_score(true_labels, predictions)
     print('Case-based Accuracy: ', acc)
