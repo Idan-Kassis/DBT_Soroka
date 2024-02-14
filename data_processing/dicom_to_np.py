@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov  1 14:39:47 2022
 
-@author: Dror
-"""
 # %% -------------------------- Initialization --------------------------------
 # Libraries
 
