@@ -1,9 +1,4 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Nov  3 19:58:05 2022
 
-@author: Dror
-"""
 
 from scipy import ndimage
 import cv2
